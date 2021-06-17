@@ -5,28 +5,30 @@ Fecha: 16/06/2021
 """
 #Library Math
 import math
+import os
 
 #* Estructura
-print(" "*57)
-print("="*57)
-print(" "*10 + " Universidad Politécnica Salesiana ")
-print(" "*20 + " Calculadora ")
-print("="*57)
-print(" "*57)
+print(" "*66)
+print("="*66)
+print(" "*15 + " Universidad Politécnica Salesiana ")
+print(" "*25 + " Calculadora ")
+print("="*66)
 print( " Bienvenido!, a continuación escoge la opción que desees realizar: ")
-print(" "*57)
+print(" "*66)
 print(" "*5+ "1. Operaciones Básicas" )
 print(" "*5+ "2. Operaciones Avanzadas" )
-print(" "*57)
-opinicial = int(input("     Opcion: "))
+print(" "*5+ "3. Salir" )
+print(" ")
+opinicial = input("     Opcion: ")
+print(" ")
 
 
 #* Funciones Básicas
 def operacionesbasicas():
     print(" ")
-    print("="*57)
-    print(" "*15 + " Operaciones Básicas ")
-    print("="*57)
+    print("="*66)
+    print(" "*21 + " Operaciones Básicas ")
+    print("="*66)
     print(" ")
     print("Escoje la operación a realizar:")
     print(" ")
@@ -54,8 +56,26 @@ def operacionesbasicas():
     else:
         print("Mal")    
     
-         
-       
+ 
+#* Funciones avanzadas
+def operacionesavanzadas():
+    print(" ")
+    print("="*66)
+    print(" "*21 + " Operaciones Avanzadas ")
+    print("="*66)
+    print(" ")
+    print("Escoje la operación a realizar:")
+    print(" ")
+    print("""     1. Suma               2.Resta 
+           
+     3.Multiplicación      4. División """)
+    
+    print(" ") 
+    
+            
+
+#* Operaciones Básicas   
+ 
 def sumar():
     print(" ")
     print("     Inserte 2 números") 
@@ -96,11 +116,10 @@ def dividir():
         print(" ")
         print("     El resultado de {} / {} es: {} ".format(a,b,result1))
     else:
+        print(" ")
         print("     Indefinido: No existe la división para {}".format(b))
     
-
-#* Funciones avanzadas
-
+#* Operaciones avanzadas
 def potencia(a,b):
     pot = math.pow(a,b)
     return pot 
@@ -110,9 +129,35 @@ def raizcuadrada(a):
     return sqr
 
 
-if (opinicial == 1):
-    operacionesbasicas()
+while (opinicial!='3'):
+    if (opinicial == '1'):
+        operacionesbasicas()
+    elif(opinicial == '2'): 
+        operacionesavanzadas()
+    elif(opinicial == '3' ):
+        break
+    else:
+        print(" "*5+"+-----------------------------+") 
+        print("     | Escoja una opción correcta! |") 
+        print(" "*5+"+-----------------------------+") 
+    print(" ")
+    opinicial = input("     Opcion: ")
+    print(" ")
     
+    
+print(" "*10+"+--------------------------------------+")
+
+print(" "*10+ "| Gracias por utilizarme, hasta luego! |") 
+
+print(" "*10+"+--------------------------------------+") 
 
 
+
+print("""                                                             """)
+print("""                            ___            ___               """)
+print("""      ______               /  /           /  /__                """)
+print("""    /  ____/  ____    ____/  /____   ____/  /__/______/ \ _________      """)
+print("""   /  /     /  __  \/  __   /  __ \/  __   /___/   _    /______    /""")
+print("""  /  /_____/  /_/  /  /_ / /   ___/  /__/ /   /  /_ /   \     ____/           """)
+print("""  \ ______/\______/\______/\_____/\______/___/\_______ \ \_______/  """)
 
