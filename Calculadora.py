@@ -7,6 +7,7 @@ Fecha: 16/06/2021
 import math
 import os
 
+
 #* Estructura
 print(" "*66)
 print("="*66)
@@ -128,7 +129,7 @@ def raizcuadrada(a):
     sqr = math.sqrt(a)
     return sqr
 
-
+logo()
 while (opinicial!='3'):
     if (opinicial == '1'):
         operacionesbasicas()
@@ -137,9 +138,9 @@ while (opinicial!='3'):
     elif(opinicial == '3' ):
         break
     else:
-        print(" "*5+"+-----------------------------+") 
-        print("     | Escoja una opción correcta! |") 
-        print(" "*5+"+-----------------------------+") 
+        print(" "*20+"+-----------------------------+") 
+        print(" "*20+"| Escoja una opción correcta! |") 
+        print(" "*20+"+-----------------------------+") 
     print(" ")
     opinicial = input("     Opcion: ")
     print(" ")
