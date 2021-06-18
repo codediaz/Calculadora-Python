@@ -26,6 +26,7 @@ print(" ")
 
 #* Funciones Básicas
 def operacionesbasicas():
+    
     print(" ")
     print("="*66)
     print(" "*21 + " Operaciones Básicas ")
@@ -36,28 +37,29 @@ def operacionesbasicas():
     print("""     1. Suma               2.Resta 
            
      3.Multiplicación      4. División """)
-    
     print(" ") 
-    
-    opcbasic = int(input("     Opción: ")) 
+    opcbasic = input("     Opción: ")
     print(" ")
-    if(opcbasic==1):
-        sumar()
-        print(" ")
-    elif(opcbasic==2):
-        restar()
-        print(" ")
-    elif(opcbasic==3):
-        multiplicar()
-        print(" ")
-    elif(opcbasic==4):
-        dividir()
-        print(" ")
+    while(opcbasic!=5):
+        
+        if(opcbasic=='1'):
+            sumar()
+            print(" ")
+        elif(opcbasic=='2'):
+            restar()
+            print(" ")
+        elif(opcbasic=='3'):
+            multiplicar()
+            print(" ")
+        elif(opcbasic=='4'):
+            dividir()
+            print(" ")
     
-    else:
-        print("Mal")    
-    
- 
+        else:
+            print(" "*20+"+-----------------------------+") 
+            print(" "*20+"| Escoja una opción correcta! |") 
+            print(" "*20+"+-----------------------------+")   
+
 #* Funciones avanzadas
 def operacionesavanzadas():
     print(" ")
@@ -129,7 +131,7 @@ def raizcuadrada(a):
     sqr = math.sqrt(a)
     return sqr
 
-logo()
+
 while (opinicial!='3'):
     if (opinicial == '1'):
         operacionesbasicas()
@@ -145,12 +147,16 @@ while (opinicial!='3'):
     opinicial = input("     Opcion: ")
     print(" ")
     
-    
-print(" "*10+"+--------------------------------------+")
-
-print(" "*10+ "| Gracias por utilizarme, hasta luego! |") 
-
-print(" "*10+"+--------------------------------------+") 
 
 
+def despedida():
+    print(" "*10+"+--------------------------------------+")
 
+    print(" "*10+ "| Gracias por utilizarme, hasta luego! |") 
+
+    print(" "*10+"+--------------------------------------+") 
+
+
+
+
+        
