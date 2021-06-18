@@ -74,11 +74,12 @@ def operacionesavanzadas():
     print(" ")
     print("Escoje la operación a realizar:")
     print(" ")
-    print("""     1. Potencia              2.Raiz
+    print("""     1. Potencia              2. Raiz Cuadrada
            
      3. Regresar al menú principal """)
     print(" ")
     op_av = input("     Opción:  ")
+    print(" ")
     while(op_av != '3'):
         
         if( op_av == '1'):
@@ -148,16 +149,15 @@ def dividir():
     
 #* Operaciones avanzadas
 def potencia():
-    print(" ")
     a = int(input("     Numero: "))
     b = int(input("     Potencia: ")) 
     pot = math.pow(a,b)
     print(" ")
     print(" "*5+"El resultado de {}^{} es: {}".format(a,b,pot)) 
-    return()
+    
 
 def raizcuadrada():
-     a = float(input("     Numero:"))
+     a = float(input("     Numero: "))
      a = round(a,2)
      print(" ")
      if ( a>=0):
@@ -168,7 +168,7 @@ def raizcuadrada():
          print(" "*5+"La raiz cuadrada de {} no esta definida dentro de los numeros reales".format(a))  
      else:
          print(" "*5+"Sólo números..")
-     return()
+     
 
 
 def despedida():
