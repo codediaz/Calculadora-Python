@@ -36,9 +36,9 @@ def operacionesbasicas():
     print(" ")
     print("Escoje la operación a realizar:")
     print(" ")
-    print("""     1. Suma               2.Resta 
+    print("""     1. Suma               2. Resta 
            
-     3. Multiplicación      4. División 
+     3. Multiplicación     4. División 
      
      5. Regresar al menú principal""")
     print(" ") 
@@ -60,12 +60,13 @@ def operacionesbasicas():
             print(" ")
                   
         else:
-            print(" "*20+"+-----------------------------+") 
-            print(" "*20+"| Escoja una opción correcta! |") 
-            print(" "*20+"+-----------------------------+")   
+            print(" "*5+"+-----------------------------+") 
+            print(" "*5+"| Escoja una opción correcta! |") 
+            print(" "*5+"+-----------------------------+") 
         return()
 #* Funciones avanzadas
 def operacionesavanzadas():
+    print(" ") 
     print(" ")
     print("="*66)
     print(" "*21 + " Operaciones Avanzadas ")
@@ -73,10 +74,25 @@ def operacionesavanzadas():
     print(" ")
     print("Escoje la operación a realizar:")
     print(" ")
-    print("""     1. Suma               2.Resta 
+    print("""     1. Potencia              2.Raiz
            
-     3.Multiplicación      4. División """)
-    
+     3. Regresar al menú principal """)
+    print(" ")
+    op_av = input("     Opción:  ")
+    while(op_av != '3'):
+        
+        if( op_av == '1'):
+            potencia()
+            print(" ")
+        elif( op_av == '2'):
+            raizcuadrada()
+            print(" ")
+        else:
+            print(" "*5+"+-----------------------------+") 
+            print(" "*5+"| Escoja una opción correcta! |") 
+            print(" "*5+"+-----------------------------+") 
+        return() 
+            
     print(" ") 
     
             
@@ -131,19 +147,36 @@ def dividir():
         print("     Indefinido: No existe la división para {}".format(b))
     
 #* Operaciones avanzadas
-def potencia(a,b):
+def potencia():
+    print(" ")
+    a = int(input("     Numero: "))
+    b = int(input("     Potencia: ")) 
     pot = math.pow(a,b)
-    return pot 
+    print(" ")
+    print(" "*5+"El resultado de {}^{} es: {}".format(a,b,pot)) 
+    return()
 
-def raizcuadrada(a):
-    sqr = math.sqrt(a)
-    return sqr
+def raizcuadrada():
+     a = float(input("     Numero:"))
+     a = round(a,2)
+     print(" ")
+     if ( a>=0):
+         sqr = math.sqrt(a)
+         sqr = round(sqr,2)
+         print(" "*5+"La raiz cuadrada de {} es: {}".format(a,sqr))
+     elif( a < 0): 
+         print(" "*5+"La raiz cuadrada de {} no esta definida dentro de los numeros reales".format(a))  
+     else:
+         print(" "*5+"Sólo números..")
+     return()
+
+
 def despedida():
-    print(" "*10+"+--------------------------------------+")
+    print(" "*5+"+--------------------------------------+")
 
-    print(" "*10+ "| Gracias por utilizarme, hasta luego! |") 
+    print(" "*5+ "| Gracias por utilizarme, hasta luego! |") 
 
-    print(" "*10+"+--------------------------------------+") 
+    print(" "*5+"+--------------------------------------+") 
     
     print(" ")
 
@@ -163,9 +196,9 @@ while (opinicial!= 'Salir'):
         despedida()
         exit()
     else:
-        print(" "*20+"+-----------------------------+") 
-        print(" "*20+"| Escoja una opción correcta! |") 
-        print(" "*20+"+-----------------------------+") 
+        print(" "*5+"+-----------------------------+") 
+        print(" "*5+"| Escoja una opción correcta! |") 
+        print(" "*5+"+-----------------------------+") 
     print(" ")
     print("="*66)
     print(" "*21 + " Menú Principal ")
